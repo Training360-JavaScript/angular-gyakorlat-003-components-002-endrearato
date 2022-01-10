@@ -14,7 +14,9 @@ export class UserListComponent implements OnInit {
    * @var users {User[]} - Input tulajdonság.
    * @default []
    */
-  @Input() users: User[] = [];
+  @Input() users: User[] = [
+    {id: 1, name: 'Béla', email: 'email@email.hu', address: 'HUN', active: true}
+  ];
   @Output() delUser: EventEmitter<User> = new EventEmitter();
   currentUser: User = new User();
 
